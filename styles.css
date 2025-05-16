@@ -1,0 +1,185 @@
+ /* Основные стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    background-color: #2980b9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Стили для главной страницы */
+.hero {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 50%;
+    border-radius: 8px;
+    margin-right: 2rem;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+/* Стили для страницы "О проекте" */
+.float-right {
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    max-width: 40%;
+    border-radius: 8px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.tech-item {
+    text-align: center;
+    margin: 1rem;
+}
+
+.tech-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Стили для страницы "Участники" */
+.team-member {
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding: 1rem; /* Увеличено с 1rem для большего внутреннего отступа */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 1rem; /* Добавлено новое свойство для расстояния между элементами */
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* margin-right удалено, так как теперь используется gap */
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem; /* Добавлено расстояние между элементами внутри блока с информацией */
+}
+
+/* Увеличено расстояние между заголовком и текстом */
+.team-member h3 {
+    margin-bottom: 1.5rem; /* Увеличено с стандартного значения */
+}
+
+/* Стили для страницы "Журнал" */
+.journal-entry {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.journal-entry img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Стили для страницы "Ресурсы" */
+.resource-category {
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.video-container {
+    margin: 1rem 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero img, .hero-text {
+        width: 100%;
+    }
+    
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .team-member img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+}
